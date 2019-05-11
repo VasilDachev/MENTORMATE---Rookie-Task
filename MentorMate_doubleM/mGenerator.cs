@@ -55,11 +55,12 @@ namespace MentorMate_doubleM
                 }
 
 
-                for (int column = 0; column <= 10 * Thickness ; column++)
+                for (int column = 0; column <= 11 * Thickness ; column++)
                 {
-
+                            /*Up*/
                     if (row < Separator)
                     {
+                        /*First M*/
                         if (column < Thickness - brUpper)
                         {
                             Console.Write('-');
@@ -81,10 +82,36 @@ namespace MentorMate_doubleM
                             Console.Write('-');
                         }
 
+                        /*Second M*/
+
+                        if (column > Thickness * 5 && column <= Thickness * 6 - brUpper) 
+                        {
+                            Console.Write('-');
+                        }
+                        if (column > 6*Thickness - brUpper && column <= Thickness * 7 + brUpper)
+                        {
+                            Console.Write('*');
+                        }
+                        if (column > Thickness * 7 + brUpper && column <= Thickness * 8 - brUpper)
+                        {
+                            Console.Write('-');
+                        }
+                        if (column > Thickness * 8 - brUpper && column <= Thickness * 9 + brUpper)
+                        {
+                            Console.Write('*');
+                        }
+                        if (column > Thickness * 9 + brUpper && column <= Thickness * 10)
+                        {
+                            Console.Write('-');
+                        }
+
+
                     }
+                            /*Down*/
                     if (row >= Separator)
                     {
-
+                        
+                        /*First M*/
                         if (column <= Thickness - brDownSide)
                         {
                             Console.Write('-');
@@ -115,6 +142,38 @@ namespace MentorMate_doubleM
                         {
                             Console.Write('-');
                         }
+
+                        /*Second M*/
+
+                        if (column > 5*Thickness&& column <= 6*Thickness - brDownSide+1)
+                        {
+                            Console.Write('-');
+                        }
+                        if (column > 6*Thickness - brDownSide+1 && column <= 7*Thickness - brDownSide+1 )
+                        {
+                            Console.Write('*');
+                        }
+                        if (column >= 7 * Thickness - brDownSideLowCount + 1 && column < 7 * Thickness + brDownSideLowCount - 2)
+                        {
+                            Console.Write('-');
+                        }
+                        if (column >= 7 * Thickness + brDownSideLowCount - 2 && column < 9 * Thickness - brDownSideLowCount+1)
+                        {
+                            Console.Write('*');
+                        }
+                        if (column >= 9 * Thickness - brDownSideLowCount+1 && column < 9 * Thickness + brDownSideLowCount - 2)
+                        {
+                            Console.Write('-');
+                        }
+                        if (column >= 9 * Thickness + brDownSideLowCount - 2 && column <= 9 * Thickness + brLowerRightEnd + (Thickness / 2) )
+                        {
+                            Console.Write('*');
+                        }
+                        if (column > 9 * Thickness + brLowerRightEnd + (Thickness / 2)  && column < Thickness * 10 + brLowerRightEnd - brDownSideLowCount + 2)
+                        {
+                            Console.Write('-');
+                        }
+
                     }
                 }
                 brDownSide++;

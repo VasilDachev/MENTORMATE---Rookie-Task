@@ -21,7 +21,7 @@ namespace MentorMate_doubleM
             int bold = int.Parse(Console.ReadLine());
             genM.Set_Thickness(bold);
             genM.Get_Thickness();
-            genM.Draw_M();
+            genM.Draw_MM();
 
             
 
