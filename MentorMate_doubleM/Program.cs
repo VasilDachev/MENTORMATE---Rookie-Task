@@ -49,7 +49,7 @@ namespace MentorMate_doubleM
                 }
 
                 
-                for (int column = 0; column <= 8*boldness-1; column++)
+                for (int column = 0; column <= 6*boldness-1; column++)
                 {
                     
                     if (row<stopper)
@@ -104,7 +104,11 @@ namespace MentorMate_doubleM
                         if (column >= 4 * boldness + moreHelp - 3 && column <= 4 * boldness + br + (boldness / 2) - 1)
                         {
                             Console.Write('*');
-                        } 
+                        }
+                        if (column>4*boldness+br+(boldness/2)-1&&column<boldness*5 +br-moreHelp+1)
+                        {
+                            Console.Write('-');
+                        }
                     }
                 }
                 helper++;
